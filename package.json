@@ -1,0 +1,26 @@
+{
+  "name": "webpack-cheatsheet",
+  "version": "1.0.0",
+  "description": "Webpack config preset",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dansiver/webpack-cheatsheet.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Danil Siver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dansiver/webpack-cheatsheet/issues"
+  },
+  "homepage": "https://github.com/dansiver/webpack-cheatsheet#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
