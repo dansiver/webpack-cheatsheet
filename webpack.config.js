@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     // Name for the output bundle file
-    filename: 'bundle.js',
+    filename: '[name]. bundle.js',
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
