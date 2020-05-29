@@ -10,4 +10,5 @@ module.exports = {
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
+  mode: "development"
 }
