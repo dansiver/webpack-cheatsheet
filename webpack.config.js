@@ -2,8 +2,17 @@
 const path = require("path");
 
 module.exports = {
-  // Entry point telling webpack from where it should take file for the bundle
-  entry: './src/index.js',
+  /**
+   * Entry point telling webpack from where it should take file for the bundle.
+   * 
+   * There is a shorthand for simple projects with a single entry point:
+   * 
+   * @example
+   * // entry: './src/index.js'
+   */
+  entry: {
+    main: './src/index.js'
+  },
   output: {
     // Name for the output bundle file
     filename: 'bundle.js',

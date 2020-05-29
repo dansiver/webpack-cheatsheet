@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\n  constructor(title) {\n    this.title = title;\n    this.date = new Date();\n  }\n\n  toString() {\n    return JSON.stringify(\n      {\n        title: this.title,\n        date: this.date.toJSON()\n      }\n    );\n  }\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\n// File to show, that import/export is handled by webpack\n\nclass Post {\n  constructor(title) {\n    this.title = title;\n    this.date = new Date();\n  }\n\n  toString() {\n    return JSON.stringify(\n      {\n        title: this.title,\n        date: this.date.toJSON()\n      }\n    );\n  }\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n\n \nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('My new awesome title');\n\nconsole.log('Post to string: ', post.toString());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n// Importing model to show, that it goes to the final bundle\n\n \nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('My new awesome title');\n\nconsole.log('Post to string: ', post.toString());\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
