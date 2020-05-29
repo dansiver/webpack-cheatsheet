@@ -11,11 +11,12 @@ module.exports = {
    * // entry: './src/index.js'
    */
   entry: {
-    main: './src/index.js'
+    main: './src/index.js',
+    analytics: './src/analytics.js'
   },
   output: {
     // Name for the output bundle file
-    filename: '[name]. bundle.js',
+    filename: '[name].bundle.js',
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
