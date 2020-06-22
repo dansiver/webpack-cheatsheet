@@ -1,7 +1,18 @@
 // Package to resolve path issues
 const path = require("path");
 
+// Plugins
+
+/**
+ * Generates html file and includes scripts with correct generated name
+ */
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
+  /**
+   * Build mode. Either development or production
+   */
+  mode: "development",
   /**
    * Entry point telling webpack from where it should take file for the bundle.
    * 
@@ -22,10 +33,20 @@ module.exports = {
      * 
      * @example
      * filename: '[name].bundle.js'
+     * 
+     * Can be a content hash (depends on content diff)
+     * 
+     * @example
+     * filename: '[name].[contenthash].js'
      */
     filename: '[name].[contenthash].js',
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
-  mode: "development"
+  /**
+   * Plugins
+   */
+  plugins: [
+    new HTMLWebpackPlugin()
+  ]
 }
