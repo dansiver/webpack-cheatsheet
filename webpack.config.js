@@ -75,6 +75,18 @@ module.exports = {
           "css-loader",
         ],
       },
+      {
+        test: /\.(png|svg|jpeg|jpg|gif|ico)$/,
+        // Webpack reads loaders from right to left
+        use: [
+          /**
+           * Allows to load files under specified extensions.
+           * Puts files in the final dist folder.
+           * Allows to use files from js of css properties
+           */
+          "file-loader"
+        ],
+      }
     ],
   },
 };
