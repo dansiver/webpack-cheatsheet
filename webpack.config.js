@@ -98,6 +98,11 @@ module.exports = {
         test: /\.xml$/,
         use: ["xml-loader"],
       },
+      // CSV
+      {
+        test: /\.csv$/,
+        use: ["csv-loader"],
+      },
     ],
   },
 };
