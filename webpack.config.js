@@ -10,7 +10,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 /**
  * Removes outdated files from output dist
  */
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   /**
@@ -20,42 +20,61 @@ module.exports = {
   /**
    * From where should webpack take source files
    */
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, "src"),
   /**
    * Entry point telling webpack from where it should take file for the bundle.
-   * 
+   *
    * There is a shorthand for simple projects with a single entry point:
-   * 
+   *
    * @example
    * // entry: './src/index.js'
    */
   entry: {
-    main: './index.js',
-    analytics: './analytics.js'
+    main: "./index.js",
+    analytics: "./analytics.js",
   },
   output: {
     /**
      * Name for the output bundle file
-     * 
-     * Can be a regular name.bunlde.js 
-     * 
+     *
+     * Can be a regular name.bunlde.js
+     *
      * @example
      * filename: '[name].bundle.js'
-     * 
+     *
      * Can be a content hash (depends on content diff)
-     * 
+     *
      * @example
      * filename: '[name].[contenthash].js'
      */
-    filename: '[name].[contenthash].js',
+    filename: "[name].[contenthash].js",
     // Path to the bundle folder
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, "dist"),
   },
   // Plugins array
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./index.html"
+      template: "./index.html",
     }),
-    new CleanWebpackPlugin()
-  ]
-}
+    new CleanWebpackPlugin(),
+  ],
+  module: {
+    // Rules array for loaders
+    rules: [
+      {
+        test: /\.css$/,
+        // Webpack reads loaders from right to left
+        use: [
+          /**
+           * Addes styles from css to head section in html
+           */
+          "style-loader",
+          /**
+           * Allows webpack to understand style imports
+           */
+          "css-loader",
+        ],
+      },
+    ],
+  },
+};
