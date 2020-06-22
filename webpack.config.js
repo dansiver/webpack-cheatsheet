@@ -70,6 +70,13 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  // Optimizations
+  optimization: {
+    // Allows to avoid double usage of the same vendor file
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   module: {
     // Rules array for loaders
     rules: [
