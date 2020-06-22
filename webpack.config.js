@@ -18,6 +18,10 @@ module.exports = {
    */
   mode: "development",
   /**
+   * From where should webpack take source files
+   */
+  context: path.resolve(__dirname, 'src'),
+  /**
    * Entry point telling webpack from where it should take file for the bundle.
    * 
    * There is a shorthand for simple projects with a single entry point:
@@ -26,8 +30,8 @@ module.exports = {
    * // entry: './src/index.js'
    */
   entry: {
-    main: './src/index.js',
-    analytics: './src/analytics.js'
+    main: './index.js',
+    analytics: './analytics.js'
   },
   output: {
     /**
@@ -50,7 +54,7 @@ module.exports = {
   // Plugins array
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./src/index.html"
+      template: "./index.html"
     }),
     new CleanWebpackPlugin()
   ]
