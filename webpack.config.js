@@ -51,6 +51,18 @@ module.exports = {
     // Path to the bundle folder
     path: path.resolve(__dirname, "dist"),
   },
+  /**
+   * Resolves pathes, extensions
+   */
+  resolve: {
+    // List of extenstions to be resolved by default
+    extensions: [".js", ".json", ".png"],
+    // Aliases for different paths
+    alias: {
+      "@models": path.resolve(__dirname, "src/models"),
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   // Plugins array
   plugins: [
     new HTMLWebpackPlugin({

@@ -155,18 +155,6 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./Post.js":
-/*!*****************!*\
-  !*** ./Post.js ***!
-  \*****************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\n// File to show, that import/export is handled by webpack\n\nclass Post {\n  constructor(title, img) {\n    this.title = title;\n    this.img = img;\n    this.date = new Date();\n  }\n\n  toString() {\n    return JSON.stringify(\n      {\n        title: this.title,\n        img: this.img,\n        date: this.date.toJSON()\n      }\n    );\n  }\n}\n\n//# sourceURL=webpack:///./Post.js?");
-
-/***/ }),
-
 /***/ "./assets/data.csv":
 /*!*************************!*\
   !*** ./assets/data.csv ***!
@@ -232,7 +220,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_me_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/me.png */ \"./assets/me.png\");\n/* harmony import */ var _assets_json_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/json.json */ \"./assets/json.json\");\nvar _assets_json_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assets/json.json */ \"./assets/json.json\", 1);\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/data.csv */ \"./assets/data.csv\");\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_data_csv__WEBPACK_IMPORTED_MODULE_5__);\n// Importing model to show, that it goes to the final bundle\n\n\n\n\n\n\n\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('My new awesome title', _assets_me_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nconsole.log('Post to string: ', post.toString());\n\nconsole.log('JSON', _assets_json_json__WEBPACK_IMPORTED_MODULE_3__);\nconsole.log('XML', _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default.a);\nconsole.log('CSV', _assets_data_csv__WEBPACK_IMPORTED_MODULE_5___default.a);\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @models/Post */ \"./models/Post.js\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_me__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/me */ \"./assets/me.png\");\n/* harmony import */ var _assets_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/assets/json */ \"./assets/json.json\");\nvar _assets_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! @/assets/json */ \"./assets/json.json\", 1);\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/assets/data.csv */ \"./assets/data.csv\");\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_data_csv__WEBPACK_IMPORTED_MODULE_5__);\n// Importing model to show, that it goes to the final bundle\n\n\n\n\n\n\n\nconst post = new _models_Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('My new awesome title', _assets_me__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n\nconsole.log('Post to string: ', post.toString());\n\nconsole.log('JSON', _assets_json__WEBPACK_IMPORTED_MODULE_3__);\nconsole.log('XML', _assets_data_xml__WEBPACK_IMPORTED_MODULE_4___default.a);\nconsole.log('CSV', _assets_data_csv__WEBPACK_IMPORTED_MODULE_5___default.a);\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./models/Post.js":
+/*!************************!*\
+  !*** ./models/Post.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\n// File to show, that import/export is handled by webpack\n\nclass Post {\n  constructor(title, img) {\n    this.title = title;\n    this.img = img;\n    this.date = new Date();\n  }\n\n  toString() {\n    return JSON.stringify(\n      {\n        title: this.title,\n        img: this.img,\n        date: this.date.toJSON()\n      }\n    );\n  }\n}\n\n//# sourceURL=webpack:///./models/Post.js?");
 
 /***/ }),
 
