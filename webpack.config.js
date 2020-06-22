@@ -7,6 +7,10 @@ const path = require("path");
  * Generates html file and includes scripts with correct generated name
  */
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+/**
+ * Removes outdated files from output dist
+ */
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 module.exports = {
   /**
@@ -43,10 +47,11 @@ module.exports = {
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
-  /**
-   * Plugins
-   */
+  // Plugins array
   plugins: [
-    new HTMLWebpackPlugin()
+    new HTMLWebpackPlugin({
+      template: "./src/index.html"
+    }),
+    new CleanWebpackPlugin()
   ]
 }
