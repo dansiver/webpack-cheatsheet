@@ -15,8 +15,15 @@ module.exports = {
     analytics: './src/analytics.js'
   },
   output: {
-    // Name for the output bundle file
-    filename: '[name].bundle.js',
+    /**
+     * Name for the output bundle file
+     * 
+     * Can be a regular name.bunlde.js 
+     * 
+     * @example
+     * filename: '[name].bundle.js'
+     */
+    filename: '[name].[contenthash].js',
     // Path to the bundle folder
     path: path.resolve(__dirname, 'dist')
   },
